@@ -1,0 +1,1 @@
+this is an interpretive language that is user friendly compared to a language such as C programming. But the classy influence of old school bay area movies are present with the monTY PYTHON and the Holy Grale, but either way this is exciting to learn PYTHON! good times coding!
