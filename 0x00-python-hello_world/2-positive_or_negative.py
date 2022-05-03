@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 import random
 number = random.randint(-20, 20)
 if number > 0:
