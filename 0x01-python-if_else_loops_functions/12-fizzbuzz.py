@@ -8,4 +8,4 @@ def fizzbuzz():
         if num % 15 == 0:
             print("FizzBuzz", end=" ")
         else:
-        print(num, end=" ")
+            print(num, end=" ")
