@@ -3,5 +3,4 @@ if __name__ == "__main__":
     __import__("add_0")
     a = 1
     b = 2
-    c = (a + b)
-    print("{}+{}={}".format(a, b, c))
+    print("{}+{}={}".format(a, b, add(a, b)))
