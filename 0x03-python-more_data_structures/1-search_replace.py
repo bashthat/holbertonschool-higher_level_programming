@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
-    for xyz in range(len(new_list)):
-        if new_list[xyz] == search:
-            new_list[xyz] = replace
-            return new_list
+    current_list = my_list[:]
+    for xyz in range(len(current_list)):
+        if current_list[xyz] == search:
+            current_list[xyz] = replace
+            return (current_list)
