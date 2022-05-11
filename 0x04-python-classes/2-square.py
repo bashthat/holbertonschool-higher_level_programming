@@ -5,7 +5,7 @@
 class Square:
 
     """a simple Square defines the size naturally
-    
+
     Attributes:
     __size (int): size of the square.
     Return:
@@ -43,4 +43,3 @@ class Square:
                 """
 
             return self.__size ^ 2
-
