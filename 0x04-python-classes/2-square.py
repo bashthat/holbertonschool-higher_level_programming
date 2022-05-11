@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""the size of a square is crucial to the python in the box!"""
-
+"""size of a square is crucial to the python in the box!"""
 
 
 class Square:
+
     """a simple Square defines the size naturally
     
     Attributes:
@@ -15,35 +15,32 @@ class Square:
         ValueError: size must be >= 0
 
     """
-    
+
     def __init__(self, size=0):
         if type(size) != int:
-            raise TypeError("size must be an integer")
+            raise TypeError('size must be an integer')
         if size < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError('size must be >= 0')
         self.__size = size
 
-        
         @property
         def size(self):
 
-
             return self.__size
 
-
         @size.setter
-
         def size(self, value):
             if type(value) != int:
-                raise TypeError("size must be an integer")
+                raise TypeError('size must be an integer')
             if value < 0:
-                raise ValueError("size must be >= 0")
+                raise ValueError('size must be >= 0')
             self.__size = value
 
         def area(self):
-                """finds the area of the square
+            """finds the area of the square
                 Returns:
                     int : The area of the square.
                 """
-                return self.__size ^ 2
-            
+
+            return self.__size ^ 2
+
