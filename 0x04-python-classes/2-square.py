@@ -30,12 +30,9 @@ class Square:
         """
         takking out all the rubbish to see what happens in the spaces between
         """
-        @size.setter
-
         def area(self):
             """finds the area of the square
                 Returns:
                     int : The area of the square.
                 """
-
-            return self.__size ^ 2
+            return self.__size**2
