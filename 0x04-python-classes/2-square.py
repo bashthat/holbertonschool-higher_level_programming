@@ -18,23 +18,18 @@ class Square:
 
     def __init__(self, size=0):
         if type(size) != int:
-            raise TypeError('size must be an integer')
-        if size < 0:
-            raise ValueError('size must be >= 0')
-        self.__size = size
+            raise TypeError("size must be an integer")
+        """
+        tips given on proper syntax
+        """
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = size
 
-        @property
-        def size(self):
-
-            return self.__size
-
-        @size.setter
-        def size(self, value):
-            if type(value) != int:
-                raise TypeError('size must be an integer')
-            if value < 0:
-                raise ValueError('size must be >= 0')
-            self.__size = value
+        """
+        takking out all the rubbish to see what happens in the spaces between
+        """
 
         def area(self):
             """finds the area of the square
