@@ -4,12 +4,9 @@
 
 class Square:
 	""" a simple Square that defines the private instance of size.
+            the size and area are being swapped hence the statement
 	"""
 	def __init__(self, size=0):
-		if type(size) != int:
-			raise TypeError("size must be an integer")
-		if size < 0:
-			raise ValueError("size must be >= 0")
 		self.__size = size
         
 
