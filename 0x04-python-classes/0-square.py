@@ -6,4 +6,3 @@ class Square:
     """the size of the square is crucial in this respect."""
     def __init__(self, size):
         self.__size = size
-    
