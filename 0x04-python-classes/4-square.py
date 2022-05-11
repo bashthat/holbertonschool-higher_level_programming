@@ -13,6 +13,14 @@ class Square:
                 raise ValueError("size must be >= 0")
             self.__size = size
         
+        """print the actual square"""
+        def my_print(self):
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print("#", end="")
+                    print()
+                else
+                    print()
 
         """the area is defined!"""
 	
