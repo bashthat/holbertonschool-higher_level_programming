@@ -2,7 +2,7 @@
 """size of a square is crucial to the python in the box!"""
 
 
-class Square:
+class Square(object):
 
     """a simple Square defines the size naturally
 
