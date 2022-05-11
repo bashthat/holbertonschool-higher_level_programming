@@ -21,6 +21,7 @@ class Square:
 
             """need to return the size, no over-achieving!"""
             @property
+            """returns the size of the square"""
             def size(self):
                 return self.__size
 
