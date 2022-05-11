@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+"""the size of a square is crucial to the python in the box!"""
+
+
 
 class Square:
+    """a simple Square defines the size naturally
+    """
     
     def __init__(self, size=0):
         if type(size) != int:
