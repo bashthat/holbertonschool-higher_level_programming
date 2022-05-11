@@ -5,6 +5,15 @@
 
 class Square:
     """a simple Square defines the size naturally
+    
+    Attributes:
+    __size (int): size of the square.
+    Return:
+        int : self.__size ** 2
+    Raise:
+        TypeError: size must be an integer
+        ValueError: size must be >= 0
+
     """
     
     def __init__(self, size=0):
@@ -15,7 +24,7 @@ class Square:
         self.__size = size
 
         def area(self):
-            
+            """area of the squre"""
 
             return self.__size ** 2
 
