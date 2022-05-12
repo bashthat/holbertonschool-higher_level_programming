@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''the size of a square is crucial'''
+'''the size of a square is crucial to the answer of the project'''
 
 
 class Square:
@@ -11,7 +11,7 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
         
-	
+	''' this function prints the actual square '''
         def my_print(self):
             if self.size > 0:
                 for i in range(self.__size):
@@ -21,6 +21,7 @@ class Square:
             else:
                 print()
 
+    '''the actual area as input defined'''
         def area(self):
             return(self.__size ** 2)
 
@@ -29,6 +30,7 @@ class Square:
             return(self.__size)
 
         @size.setter
+        '''sets the size based on the input as a function to the square print'''
         def size(self, value)
             if type(value) != int:
                 raise TypeError("size must be an integer")
