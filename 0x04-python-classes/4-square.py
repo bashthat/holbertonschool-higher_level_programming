@@ -1,4 +1,5 @@
-ize of a square is crucial'''
+#!/usr/bin/python3
+'''size of a square is crucial'''
 
 
 class Square:
