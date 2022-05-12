@@ -11,8 +11,9 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
         
-	 """print the actual square"""
+	
         def my_print(self):
+            """prints square #"""
             if self.size > 0:
                 for i in range(self.__size):
                     for j in range(self.__size):
@@ -22,13 +23,16 @@ class Square:
                 print()
 
         def area(self):
+            """prints area"""
             return(self.__size ** 2)
 
         @property
+        """takes in nthe size of the square"""
         def size(self):
             return(self.__size)
 
         @size.setter
+        """size setter"""
         def size(self, value)
             if type(value) != int:
                 raise TypeError("size must be an integer")
