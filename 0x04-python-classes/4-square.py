@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""the size of a square is crucial"""
+"the size of a square is crucial"
 
 
 class Square:
-	""" a simple Square that defines the private instance of size."""
+	" a simple Square that defines the private instance of size."
     def __init__(self, size=0):
         if type(size) != int:
             raise TypeError("size must be an integer")
@@ -13,7 +13,6 @@ class Square:
         
 	
         def my_print(self):
-            """prints square #"""
             if self.size > 0:
                 for i in range(self.__size):
                     for j in range(self.__size):
@@ -23,16 +22,13 @@ class Square:
                 print()
 
         def area(self):
-            """prints area"""
             return(self.__size ** 2)
 
         @property
-        """takes in nthe size of the square"""
         def size(self):
             return(self.__size)
 
         @size.setter
-        """size setter"""
         def size(self, value)
             if type(value) != int:
                 raise TypeError("size must be an integer")
