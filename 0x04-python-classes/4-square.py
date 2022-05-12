@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""the size of a square is crucial"""
+'''the size of a square is crucial'''
 
 
 class Square:
-	""" a simple Square that defines the private instance of size."""
+	''' a simple Square that defines the private instance of size.'''
     def __init__(self, size=0):
         if type(size) != int:
             raise TypeError("size must be an integer")
