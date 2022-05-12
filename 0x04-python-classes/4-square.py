@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-    #size of a square is crucial
+'''#size of a square is crucial'''
 
 
 class Square:
-    # a simple Square that defines the private instance of size.
+    ''' simple Square that defines the private instance of size.'''
     def __init__(self, size=0):
         '''initializes the size of the square.'''
         if type(size) != int:
@@ -14,7 +14,7 @@ class Square:
         
 	
         def my_print(self):
-    #prints a square with the character.
+
             if self.size > 0:
                 for i in range(self.__size):
                     for j in range(self.__size):
@@ -24,7 +24,6 @@ class Square:
                 print()
 
         def area(self):
-    #returns the area of the square.
             return(self.__size ** 2)
 
         @property
