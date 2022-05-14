@@ -5,6 +5,8 @@
 def matrix_divided(matrix, div):
     if type(matrix) list:
         TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    
+    
     if not matrix:
         TypeError("Each row of the matrix must have the same size")
 
