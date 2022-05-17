@@ -14,14 +14,17 @@ class Rectangle:
         def area(self):
             return self.width * self.height 
         
-        @property
+        @setter.width
+        
         def width(self): 
         
             if type(width) != int:
                 raise TypeError("width must be an integer")
             if width <= 0:
                 raise ValueError("width must be >= 0")
+        
         def height(self):
+            
             if type(height) != int:
                 raise TypeError("width must be an integer")
             if height <= 0:
