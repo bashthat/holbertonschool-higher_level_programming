@@ -1,0 +1,16 @@
+"""
+print the squares dimensions
+"""
+def print(x * z)
+"""
+>>>print(2, 2)
+4
+>>>print(8, 8)
+64
+>>>print(4, 4)
+16
+>>>print(9, 9)
+81
+>>>print(y, z)
+print(e)
+"""
