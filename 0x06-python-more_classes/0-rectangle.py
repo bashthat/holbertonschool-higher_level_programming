@@ -9,10 +9,6 @@ class Rectangle:
         self.height = height
         
         @property
-        def area(self):
-            return self.__width * self.__height
-        
-        @property
         def width(self):
             return (self.__width)
 
@@ -25,7 +21,7 @@ class Rectangle:
             '''setting the width of the rectangle'''        
             if not isinstance(value, int):
                 raise TypeError('width must be an integer')
-            if width < 0:
+            if value < 0:
                 raise ValueError('width must be >= 0')
             self.__width = value
             return("\n")
@@ -35,7 +31,7 @@ class Rectangle:
             '''setting the height of the equation'''
             if not isinstance(value, int):
                 raise TypeError('height must be an integer')
-            if height < 0:
+            if value < 0:
                 raise ValueError('height must be >= 0')
             self.__height = value
             return("\n")
