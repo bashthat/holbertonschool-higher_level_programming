@@ -14,13 +14,13 @@ def add(a, b):
     52
 >>> add (11, 11)
     22
->>> add (14, 155)
-    169
+>>> add (14, t)
+  print(e)
 >>> add (9, 9)
     18
 >>> add (x, 3)
-print(e)
+  print(e)
 >>> add (print, error)
-print(e)
+  print(e)
   """
   return a + b
