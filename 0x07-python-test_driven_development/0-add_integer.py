@@ -3,15 +3,15 @@
 
 
 def add_integer(a, b=98):
-    if type(a) == float:
+    if isinstance(a, float):
         a = int
-    elif type(a) != int:
-        raise TypeError ("a must be an integer")
+    elif not isinstance(a, int):
+        raise TypeError("a must be an integer")
 
-    if type(b) == float:
+    if isinstance(b, float):
         b = int
-    
-    elif type(a) != int:
+
+    elif not isinstance(a, int):
         raise TypeError("b must be an integer")
     '''adding both integers as a return'''
     return int(a) + int(b)
