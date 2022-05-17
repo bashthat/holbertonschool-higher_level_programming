@@ -1,0 +1,22 @@
+"""
+the doctest for adding two integers
+"""
+
+def add(a, b):
+  """
+>>> add (9, 3)
+   12
+>>> add (12, 1)
+   13
+>>> add (7, 9)
+    16
+>>> add (10, 42)
+    52
+>>> add (11, 11)
+    22
+>>> add (14, 155)
+    169
+>>> add (9, 9)
+    18
+  """
+  return a + b
