@@ -18,5 +18,9 @@ def add(a, b):
     169
 >>> add (9, 9)
     18
+>>> add (x, 3)
+print(e)
+>>> add (print, error)
+print(e)
   """
   return a + b
