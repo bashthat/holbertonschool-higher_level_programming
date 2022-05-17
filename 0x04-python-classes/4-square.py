@@ -3,32 +3,37 @@
 
 
 class Square:
-<<<<<<< HEAD
-	""" a simple Square that defines the private instance of size.
-            the size and area are being swapped hence the statement
-	"""
-	def __init__(self, size=0):
-            if type(size) != int:
-                raise TypeError("size must be an integer")
-            if size < 0:
-                raise ValueError("size must be >= 0")
-            self.__size = size
-        
-        """print the actual square"""
-        def my_print(self):
-            for i in range(self.__size):
-                for j in range(self.__size):
-                    print("#", end="")
-                    print()
-                else
-                    print()
-=======
-    '''this class prints a square'''
+
+
+<< << << < HEAD
+   """ a simple Square that defines the private instance of size.
+        the size and area are being swapped hence the statement
+    """
+
+    def __init__(self, size=0):
+        if type(size) != int:
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
+
+    """print the actual square"""
+
+    def my_print(self):
+        for i in range(self.__size):
+            for j in range(self.__size):
+                print("#", end="")
+                print()
+            else
+               print()
+== == == =
+   '''this class prints a square'''
+
     def __init__(self, size=0):
         self.size = size
->>>>>>> 35843c7e8e3660b0e8abe694adb6051c705b8b26
+>>>>>> > 35843c7e8e3660b0e8abe694adb6051c705b8b26
 
-    def area(self):
+   def area(self):
         return(self.__size * self.__size)
 
     def my_print(self):
