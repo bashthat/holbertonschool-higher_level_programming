@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''this function states a first and last name through a series of exmaples and tests.'''
+'''this function states a first and last name '''
 
 
 def say_my_name(first_name, last_name=""):
