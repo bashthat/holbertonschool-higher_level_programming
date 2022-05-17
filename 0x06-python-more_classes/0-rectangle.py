@@ -3,16 +3,16 @@
 
 
 class Rectangle:
-    '''the dimensions of the triangle being described in a function'''
+    '''the dimensions of the triangle being defined in through attributes'''
     def __init__(self, width=0, height=0):
         
         def width(self):
-            self.width = width
-            self.height = height
+            self.__width = width
+            self.__height = height
         
         @property
         def area(self):
-            return self.width * self.height 
+            return self.__width * self.__height 
         
         @setter.width
         
