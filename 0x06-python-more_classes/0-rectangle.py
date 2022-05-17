@@ -5,8 +5,12 @@
 class Rectangle:
     '''the dimensions of the triangle being defined through attributes'''
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
+        
+        @property
+        def area(self):
+            return self.__width * self.__height
         
         @property
         def width(self):
