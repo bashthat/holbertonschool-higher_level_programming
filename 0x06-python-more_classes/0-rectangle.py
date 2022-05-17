@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' this is a class initializing a Rectangle'''
+    ''' this is a class initializing a Rectangle'''
 
 
 class Rectangle:
@@ -9,7 +9,7 @@ class Rectangle:
         def width(self):
             self.__width = width
             self.__height = height
-        
+    ''' the definition of the objects IO '''     
         @property
         def width(self):
             return (self.__width)
@@ -28,8 +28,8 @@ class Rectangle:
         
         def height(self, value):
             
-            if type(height) != int:
-                raise TypeError("width must be an integer")
+            if type(self) != int:
+                raise TypeError("height must be an integer")
             if height <= 0:
-                raise ValueError("width must be >= 0")
-            self.height = height
+                raise ValueError("height must be >= 0")
+            self.__height = height
