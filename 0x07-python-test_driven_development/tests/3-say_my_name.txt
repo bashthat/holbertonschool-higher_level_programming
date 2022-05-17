@@ -1,1 +1,17 @@
-
+"""
+this is a doc test for names
+"""
+def say_my_name(x + y)
+"""
+>>> (bob, white)
+my name is bob white
+>>> (bob, brown)
+my name is bob brown 
+>>> (bexley, breeze)
+my name is bexley breeze
+>>> (12, smith)
+print(e)
+>>> (tres, dudez)
+my name is tres dudez
+"""
+return (x, y)
