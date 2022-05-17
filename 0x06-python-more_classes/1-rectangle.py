@@ -14,7 +14,7 @@ class Rectangle:
 
     @property
     def area(self):
-        return (self.__height * self.__width)
+        return self.__height * self.__width
 
     @property
     def perimeter(self):
