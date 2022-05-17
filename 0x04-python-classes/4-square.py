@@ -5,7 +5,7 @@
 class Square:
 
 
-<< << << < HEAD
+
    """ a simple Square that defines the private instance of size.
         the size and area are being swapped hence the statement
     """
@@ -26,12 +26,12 @@ class Square:
                 print()
             else
                print()
-== == == =
+
    '''this class prints a square'''
 
     def __init__(self, size=0):
         self.size = size
->>>>>> > 35843c7e8e3660b0e8abe694adb6051c705b8b26
+
 
    def area(self):
         return(self.__size * self.__size)
