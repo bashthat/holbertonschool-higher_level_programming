@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''this is a prototype that returns an integer or float as part of a function '''
+'''this is a prototype that returns an integer'''
 
 
 def add_integer(a, b=98):
