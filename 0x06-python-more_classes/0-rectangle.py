@@ -3,11 +3,10 @@
 
 
 class Rectangle:
-    '''the dimensions of the triangle being defined through defined attributes'''
+    '''the dimensions of the triangle being defined through attributes'''
     def __init__(self, width=0, height=0):
         self.width = width
-        self.height = height 
-    
+        self.height = height
         @property
         def width(self):
             return (self.__width)
@@ -31,3 +30,4 @@ class Rectangle:
                 raise TypeError("height must be an integer")
             if height < 0:
                 raise ValueError("height must be >= 0")
+            return("\n")
