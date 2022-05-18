@@ -2,8 +2,8 @@
 '''this is a function returning the avail list'''
 
 
-class Bass
-'''parent class'''
+def __init__(self, list):
+'''not sure if I need an object instead of list?'''
 
-
-def lookup(opj)
+def lookup(obj):
+	self.__obj == obj
