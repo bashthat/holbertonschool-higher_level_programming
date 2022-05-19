@@ -1,8 +1,13 @@
-#!!/usr/bin/python3
-'''BaseGeormetry func'''
+#!/usr/bin/python3
+'''BaseGeometry class'''
 
 
-def area(self)
-    self._area = area
-
-    Exception("area() is not implemented")
+class BaseGeometry:
+    '''
+    defining the area
+    '''
+    def area(self)
+        '''
+        exception
+        '''
+        raise Exception("area() is not implemented")
