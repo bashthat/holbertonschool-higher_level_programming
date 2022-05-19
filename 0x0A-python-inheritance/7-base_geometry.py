@@ -9,13 +9,12 @@ class BaseGeometry:
     class method Basegeometry
     '''
     pass
-    
+
     def area(self):
         '''
         the area
         '''
         raise Exception("area() is not implemented")
-    
 
     def integer_validator(self, name, value):
             '''
