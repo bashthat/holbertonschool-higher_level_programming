@@ -3,6 +3,8 @@
 
 
 def is_same_class(obj, a_class):
-   if type(obj) is a_class:
-       return true
-   return false
+    '''notion to the function'''
+    if type(obj) is a_class:
+        return true
+    else:
+        return false
