@@ -3,4 +3,5 @@
 
 
 class BaseGeometry:
+    '''BassGeometry function'''
     pass
