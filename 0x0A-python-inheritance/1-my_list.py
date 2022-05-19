@@ -2,5 +2,6 @@
 '''prints sorted list'''
 
 
-class Base
-'''bbase class for attribute network'''
+class MyList(list):
+    def print_sorted(self):
+        return print(sorted(MyList)
