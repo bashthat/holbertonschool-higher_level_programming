@@ -1,14 +1,31 @@
 #!/usr/bin/python3
-'''BaseGeometry'''
+'''
+BaseGeometry
+'''
 
 
-def integer_validator(self, name, value):
-    self(__.name) = name
-    self(__.value) = value
+class BaseGeometry:
+    '''
+    class method Basegeometry
+    '''
+    pass
+    
+    def area(self):
+        '''
+        the area
+        '''
+        raise Exception("area() is not implemented")
+    
 
-    TypeError print("<name> must be greater than 0")
-
-    ValueError print("<name> must be greater than 0")
-
-def area(self)
-    self.__area = area
+    def integer_validator(self, name, value):
+            '''
+            validates the value of int
+            '''
+        if type(value) != int:
+            raise TypeError print("{} must be greater than 0".format(name))
+            return False
+        if value <= 0:
+            raise ValueError print("{} must be greater than 0".format(name))
+            return False
+        else:
+            return value
