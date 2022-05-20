@@ -8,5 +8,5 @@ def read_file(filename=""):
     '''
     read file, with!
     '''
-    with open(filename, 'r') as file:
-        print(file.read(), end="")
+    with open(filename, 'r') as f:
+        print(f.read(), end="")
