@@ -6,4 +6,4 @@ returning a string
 '''
 
 def from_json_string(my_str):
-    return json.dumps(my_str.__dict__)
+    return json.load(my_str)
