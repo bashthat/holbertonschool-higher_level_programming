@@ -5,6 +5,6 @@ writing into a file
 
 def write_file(filename="", text=""):
 
-    with open(filename, "w", text) as file:
-        return file.write(text)
+    with open(filename, "w", text) as f:
+        return f.write(text)
         print(len(text))
