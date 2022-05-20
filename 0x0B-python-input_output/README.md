@@ -1,0 +1,1 @@
+This project is based on input/output given system calls in the python language. There is a good reason to review the languaage and get familiar with the python shell. Definitely an opportunity to learn more on the language!
