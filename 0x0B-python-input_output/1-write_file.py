@@ -3,6 +3,7 @@
 writing into a file
 '''
 
+
 def write_file(filename="", text=""):
     '''
     open then write to text in the return
