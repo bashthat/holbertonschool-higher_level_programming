@@ -3,6 +3,7 @@
 class to json import
 '''
 
+
 def class_to_json(obj):
     '''return dictionary description'''
     if hasattr(obj, "__dict__"):
