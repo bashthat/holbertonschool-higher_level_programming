@@ -8,7 +8,7 @@ def read_file(filename=""):
     '''
     read file, with!
     '''
-    with open(filename, 'r', encoding="utf") as f:
+    with open(filename, 'r', encoding="utf-8") as f:
         '''
         defining the text
         '''
