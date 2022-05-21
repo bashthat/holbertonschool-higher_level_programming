@@ -9,8 +9,8 @@ def load_from_json_file(filename):
     '''
     creating the JSON file
     '''
-    with open(filename, "r", encoding="utf-8") as f:
+    with open(filename, mode="r", encoding="utf-8") as fig:
         '''
         open then write to filez to return the content.
         '''
-        return json.load(f)
+        return json.load(fig)
