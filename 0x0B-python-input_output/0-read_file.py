@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-import os
+
 '''
-importing the operating system
+simple system call to open and read a file
 '''
 
 def read_file(filename=""):
