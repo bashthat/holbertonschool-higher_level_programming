@@ -18,6 +18,7 @@ class Student:
         else:
             '''returns the dict of student'''
             return self.__dict__.copy()
+
     def reload_from_json(self, json):
         '''
         attributes loading from to_json
