@@ -8,8 +8,7 @@ def pascal_triangle(n):
     '''the triangle method with a nested loop
         function returns lists of lists of int
         but defining the rows utilizing the range()
-        function. defining range(n); 
-        n being the integer
+        function. defining range(n).
     '''
     rows = [[1 for xyz in range(qrs + 1)] for qrs in range(n)]
     ''' nested loop that prints the triangle'''
