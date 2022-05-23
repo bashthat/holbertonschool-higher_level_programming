@@ -2,7 +2,14 @@
 '''This is the matrix devided.. welcome to the new dimensions of Py! -- but this is the function of'''
 
 
+class Matrix:
+    '''this is thet matrix class for the project. '''
+
+
 def matrix_divided(matrix, div):
+
+        
+
     if type(matrix) list:
         TypeError("matrix must be a matrix (list of lists) of integers/floats")
     
