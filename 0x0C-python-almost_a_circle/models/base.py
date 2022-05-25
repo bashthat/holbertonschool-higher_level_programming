@@ -3,6 +3,5 @@
 class Base
 
 
+
 def __init__(self, id=None):
-
-
