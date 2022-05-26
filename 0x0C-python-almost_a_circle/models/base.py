@@ -10,6 +10,7 @@ import json
 python libraries imported for class Base
 '''
 
+
 class Base:
     '''import models.base from Base'''
     __nb_objects = 0
@@ -17,6 +18,7 @@ class Base:
         this manages all the id attributes
         to avoid monotany!!
     '''
+
     def __init__(self, id=None):
         if id is None:
             Base.__nb_objects += 1
@@ -30,7 +32,7 @@ class Base:
         this is a static dictionary and list
         aka json string
         '''
-                    
+
         if list_dictionaries is None:
             list_dictionaries = []
         return json.dumps(list_dictionaries)
@@ -56,7 +58,7 @@ class Base:
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         '''the instance that returns all attributes
