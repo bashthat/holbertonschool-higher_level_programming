@@ -1,72 +1,76 @@
 #!/usr/bin/python3
-'''
-the Base imports to the square and the rectangle files
-'''
-
-import csv
+"""
+import base class
+"""
 import json
-
-'''
-python libraries imported for class Base
-'''
 
 
 class Base:
-    '''import models.base from Base'''
+    """ stating the class """
     __nb_objects = 0
-    '''a private class attribute
-        this manages all the id attributes
-        to avoid monotany!!
-    '''
 
     def __init__(self, id=None):
+        """
+        initiating the rectangle
+        """
         if id is None:
             Base.__nb_objects += 1
-            self.id = self.__nb_objects
+            self.id = Base.__nb_objects
         else:
             self.id = id
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        '''
-        this is a static dictionary and list
-        aka json string
-        '''
-
-        if list_dictionaries is None:
+        """
+        Return the JSON string representation of list_dictionaries
+            list_dictionaries lists the dictionaries available
+        """
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             list_dictionaries = []
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        '''
-        cleverly writes json string representation to a file
-        '''
+        """
+        save to file with classmethod
+        """
         filename = cls.__name__ + ".json"
-        fable = []
-        if list_objs is not None:
-            for i in list_objs:
-                fable.append(cls.to_dictionary(i))
-        with open(filename, 'w') as f:
-            f.write(cls.to_json_string(fable))
+        j_object = []
+        with open(filename, "w") as file:
+            if list_objs is None:
+                file.write("[]")
+            else:
+                j_object = [i.to_dictionary() for i in list_objs]
+                file.write(Base.to_json_string(j_object))
 
     @staticmethod
     def from_json_string(json_string):
-        ''' returns a static list for
-        the sake of json string rep
-        '''
-        if json_string is None or len(json_string) == 0:
+        """
+        Return the list of the JSON string
+        """
+        if json_string is None or len(json_string) <= 0:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
-        '''the instance that returns all attributes
-            in which are already set
-        '''
-        if cls.__name__ is "Rectangle":
-            xyz = cls(1, 1)
-        elif cls.__name__ is "Square":
-            xyz = cls(1)
-        xyz.update(**dictionary)
-        return xyz
+        """
+        Return an instance with all attributes
+        """
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ Returns a list of instances """
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as file:
+                listd = cls.from_json_string(file.read())
+                return [cls.create(**i) for i in listd]
+        except Exception:
+            return []
