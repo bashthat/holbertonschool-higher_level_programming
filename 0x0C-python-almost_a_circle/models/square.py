@@ -1,62 +1,59 @@
 #!/usr/bin/python3
-'''
-class Square(Rectangle)
-'''
+"""
+the inherent square of the rectangle class
+"""
 
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    '''
-    utilizing super() for the Square(Rectangle) philosophy
-    '''
+    """
+    Square class inherent to the rectangle
+    """
 
     def __init__(self, size, x=0, y=0, id=None):
-        '''
-        __init__ defines the initialization of the square as a function
-        while the super class logic is applied to the square class attributes
-        from the Rectangle Class'''
+        """
+        init for the sake of a super function
+        """
         super().__init__(size, size, x, y, id)
-        self.size = size
+
+    def to_dictionary(self):
+        """
+        Returning the squares dictionary
+        """
+        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
+
+    def update(self, *args, **kwargs):
+        """
+        updating attributes with new arguments
+        """
+        if not args:
+            for key in kwargs:
+                setattr(self, key, kwargs[key])
+        else:
+            attrs, i = ['id', 'size', 'x', 'y'], 0
+            for value in args:
+                setattr(self, attrs[i], value)
+                i += 1
+
+    def __str__(self):
+        """
+        string cheese in the shape of a square
+        """
+        return f"[{self.__class__.__name__}] ({self.id}) {self.x}/{self.y}\
+ - {self.width}"
 
     @property
     def size(self):
+        """
+        getter
+        """
         return self.width
 
     @size.setter
     def size(self, value):
-        self.width = value
-        self.height = value
-
-    def __str__(self):
-        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id,
-                                                         self.x, self.y, self.width)
-
-    def update(self, *args, **kwargs):
-        if len(args):
-            for z, a in enumerate(args):
-                if z == 0:
-                    self.id = a
-                elif z == 1:
-                    self.size = a
-                elif z == 2:
-                    self.x = a
-                elif z == 3:
-                    self.y = a
-        else:
-            if "id" in kwargs:
-                self.id = kwargs["id"]
-            if "size" in kwargs:
-                self.size = kwargs["size"]
-            if "x" in kwargs:
-                self.x = kwargs["x"]
-            if "y" in kwargs:
-                self.y = kwargs["y"]
-
-    def to_dictionary(self):
-        d = {}
-        d["id"] = self.id
-        d["size"] = self.size
-        d["x"] = self.x
-        d["y"] = self.y
-        return d
+        """
+        setter
+        """
+        self.width = self.hw_validator("width", value)
+        self.height = self.hw_validator("width", value)
