@@ -8,7 +8,7 @@ from sys import argv
 
 if __name__ == '__main__':
 
-db = MySQLdb.connect(
+    db = MySQLdb.connect(
     host='localhost',
     port=3306,
     user=argv[1],
@@ -16,12 +16,12 @@ db = MySQLdb.connect(
     db=argv[3],
     charset='utf8',
     )
-csr = db.cursor()
-csr.execute('SELECT * FROM states ORDER BY states.id;')
+cursor = db.cursor()
+cursor.execute('SELECT * FROM states ORDER BY states.id;')
 
-states = csr.fetchall()
+states = cursor.fetchall()
 
 for x in states:
-    print x
-csr.close()
+    print(x)
+cursor.close()
 db.close()
