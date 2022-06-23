@@ -17,7 +17,7 @@ db = MySQLdb.connect(
     charset='utf8',
     )
 csr = db.cursor()
-csr.execute('SELECT * FROM states ORDER BY states.id ASC;')
+csr.execute('SELECT * FROM states ORDER BY states.id;')
 
 states = csr.fetchall()
 
