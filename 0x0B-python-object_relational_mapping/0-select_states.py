@@ -17,12 +17,12 @@ if __name__ == '__main__':
     db=sys.argv[3],
     charset='utf8',
     )
-cursor = db.cursor()
-cursor.execute('SELECT * FROM states ORDER BY states.id;')
+    cursor = db.cursor()
+    cursor.execute('SELECT * FROM states ORDER BY states.id;')
 
-states = cursor.fetchall()
+    states = cursor.fetchall()
 
-for x in states:
-    print(x)
-cursor.close()
-db.close()
+    for x in states:
+        print(x)
+    cursor.close()
+    db.close()
