@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 
 """ Creating the SQL table for the list of states in hbtn_0e_0_usa """
