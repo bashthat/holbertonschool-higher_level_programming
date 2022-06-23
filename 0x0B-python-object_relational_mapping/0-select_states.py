@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# -*- coding: utf-8 -*-
+
 
 """ Creating the SQL table for the list of states in hbtn_0e_0_usa """
 
@@ -16,12 +16,12 @@ db = MySQLdb.connect(
     db=argv[3],
     charset='utf8',
     )
-cursr = db.cursor()
-cursr.execute('SELECT * FROM states ORDER BY states.id ASC;')
+csr = db.cursor()
+csr.execute('SELECT * FROM states ORDER BY states.id ASC;')
 
-states = cursr.fetchall()
+states = csr.fetchall()
 
 for x in states:
     print x
-cursr.close()
+csr.close()
 db.close()
