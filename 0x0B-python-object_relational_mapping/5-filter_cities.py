@@ -17,12 +17,11 @@ if __name__ == '__main__':
     db=sys.argv[3],
     charset='utf8',
     )
-    cursor = db.cursor()
-    cursor.execute("SELECT cities.name, FROM cities LEFT JOIN states ON states.id = cities.state_id WHERE states.name = %s ORDER BY cities.id ASC", (sys.argv[4],))
+    word = db.cursor()
+    word.execute("SELECT cities.name FROM cities LEFT JOIN states ON states.id = cities.state_id WHERE states.name = %s ORDER BY cities.id ASC", (sys.argv[4],))
 
-    states = cursor.fetchall()
+    states = word.fetchall()
 
-    for x in states:
-        print(x)
-    cursor.close()
+    print(" ".join([row[0]] for row in states))
+    word.close()
     db.close()
