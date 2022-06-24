@@ -6,6 +6,7 @@
 if __name__ == "__main__":
 
     import sys
+    import sqlalchemy
     from sqlalchemy import create_engine
     from sqlalchemy.orm import Session
     from sys import argv
