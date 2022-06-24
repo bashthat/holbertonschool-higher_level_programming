@@ -25,5 +25,5 @@ if __name__ == '__main__':
     session.add(new)
     novelty_state = session.query(State).filter(State.name=='Louisiana').first()
     session.commit()
-    print ("{}").format(novelty_state.id)
+    print(str(novelty_state.id))
     session.close()
