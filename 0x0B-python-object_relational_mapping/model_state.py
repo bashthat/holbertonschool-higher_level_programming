@@ -8,15 +8,14 @@ from sqlalchemy.ext.declarative import declarative_base
 from sys import argv
 from model_state import Base, State
 
-Base = declarative_base()
 """
 Declarative bass. the Class State.
 """
-
+Base = declarative_base()
 
 class State(Base):
     """
-    imports//Base.metadata.create_all(engine)//
+    the base state
     """
 
     __tablename__ = 'states'
