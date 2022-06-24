@@ -18,11 +18,11 @@ if __name__ == '__main__':
     charset='utf8',
     )
     cursor = db.cursor()
-    cursor.execute("SELECT cities.id, cities.name, states.name FROM cities LEFT JOIN states ON states.id = cities.state.id ORDER BY cities.id ASC")
+    cursor.execute("SELECT cities.id, cities.name, states.name FROM cities LEFT JOIN states ON states.id = cities.state_id ORDER BY cities.id ASC")
 
     states = cursor.fetchall()
 
-    for x in states:
-        print(x)
+    for row in states:
+        print(row)
     cursor.close()
     db.close()
