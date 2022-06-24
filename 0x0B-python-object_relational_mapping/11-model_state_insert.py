@@ -10,19 +10,20 @@ if __name__ == '__main__':
     import sys
     import sqlalchemy
     from sys import argv
+    from sqlalchemy import sessionmaker
     from model_state import Base, State
     from sqlalchemy.orm import Session
     from sqlalchemy import create_engine
 
-    engine = \
+    vtech = \
         create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1],
                       sys.argv[2], sys.argv[3]), pool_pre_ping=True)
-    Base.metadata.create_all(engine)
-    session = Session(engine)
+    Base.metadata.create_all(vtech)
+    Session = sessionmaker(bind=vtech)
+    session = Session()
     new = State(name='Louisiana')
     session.add(new)
-    novelty_state = session.query(State).filter(State.name
-            == 'Louisiana').first()
+    novelty_state = session.query(State).filter(State.name=='Louisiana').first()
     session.commit()
     print ("{}").format(novelty_state.id)
     session.close()
