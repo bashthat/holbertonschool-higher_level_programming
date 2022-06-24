@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 """a script that lists all State objects from the database hbtn_0e_6_usa"""
