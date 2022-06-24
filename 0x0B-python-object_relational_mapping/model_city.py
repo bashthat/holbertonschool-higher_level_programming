@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 """new track on model_city"""
@@ -7,7 +7,7 @@ import sys
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sys import argv
-from relationship_state import Base, State
+from model_state import Base, State
 
 
 class City(Base):
