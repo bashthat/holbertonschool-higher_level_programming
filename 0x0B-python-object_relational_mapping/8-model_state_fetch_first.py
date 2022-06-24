@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 """a script that prints the first State object from the database hbtn_0e_6_usa"""
