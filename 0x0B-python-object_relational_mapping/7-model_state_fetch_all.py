@@ -3,14 +3,15 @@
 
 """a script that lists all State objects from the database hbtn_0e_6_usa"""
 
-import sys
-from importlib_metadata import metadata
-from sqlalchemy import create_engine
-from sqlalchemy.orm import Session
-from sys import argv
-from model_state import Base, State
+if __name__ == "__main__":
 
-if __name__ == '__main__':
+    import sys
+    from sqlalchemy import create_engine
+    from sqlalchemy.orm import Session
+    from sys import argv
+    from model_state import Base, State
+
+
 
     engine = \
         create_engine('mysql+mysqldb;//{}:{}@localhost/{}'.format(sys.argv[1],
