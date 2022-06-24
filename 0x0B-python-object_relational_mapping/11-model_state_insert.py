@@ -10,7 +10,7 @@ if __name__ == '__main__':
     import sys
     import sqlalchemy
     from sys import argv
-    from sqlalchemy import sessionmaker
+    from sqlalchemy.orm import sessionmaker
     from model_state import Base, State
     from sqlalchemy.orm import Session
     from sqlalchemy import create_engine
