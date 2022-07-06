@@ -3,21 +3,20 @@
 networking! fetching https://intranet.hbtn.io/status
 """
 
-
-import urllib.request
+from asyncore import read
 
 
 if __name__ == "__main__":
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as xyz:
+    
+    import urllib.request as xyz
+    url = xyz.Request('https://intranet.hbtn.io/status')
+    with xyz.urlopen(url) as response:
         content = xyz.read()
-        reading to print the response
+        #reading to print the response
         #retrieving the content
         
-        site = response.read()
-        print("Body response:")
-        print("\t- type: {}".format(type(html)))
-        print("\t- content: {}".format(html))
-        print("\t- utf8 content: {}".format(html.decode("utf-8")))
-
-
-    fetcher()
+        reads = response.read()
+        print(f"Body response:")
+        print(f"\t- type: (type(reads))")
+        print(f"\t- content: {reads})")
+        print(f"\t- utf8 content: {reads.decode('utf-8')}")
