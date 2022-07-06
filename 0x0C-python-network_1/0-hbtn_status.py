@@ -3,7 +3,7 @@
 networking! fetching https://intranet.hbtn.io/status
 """
 
-from asyncore import read
+
 
 
 if __name__ == "__main__":
