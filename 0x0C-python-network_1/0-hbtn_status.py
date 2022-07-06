@@ -2,21 +2,19 @@
 """
 networking! fetching https://intranet.hbtn.io/status
 """
+import urllib
+import urllib.request
 
-
-
+"""
+fetching https://intranet.hbtn.io/status
+"""
 
 if __name__ == "__main__":
     
     import urllib.request as xyz
-    url = xyz.Request('https://intranet.hbtn.io/status')
-    with xyz.urlopen(url) as response:
-        content = xyz.read()
-        #reading to print the response
-        #retrieving the content
-        
-        reads = response.read()
-        print(f"Body response:")
-        print(f"\t- type: (type(reads))")
-        print(f"\t- content: {reads})")
-        print(f"\t- utf8 content: {reads.decode('utf-8')}")
+    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+        html = response.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(html)))
+        print("\t- content: {}".format(html))
+        print("\t- utf8 content: {}".format(html.decode("utf-8")))
