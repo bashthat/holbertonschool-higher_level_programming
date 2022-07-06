@@ -4,14 +4,13 @@ Python script that takes in a URL, sends a request to the URL and displays the v
 """
 
 
-from nturl2path import url2pathname
+import urllib.request
+import sys
+import os
 
+#creating the process
+#
 
 if __name__ == "__main__":
-    import urllib.request as imports
-    from sys import argv
-    # x-request-id
-    url = argv[1]
-    xyz = imports.Request(url)
-    with imports.urlopen(r) as response:
-        print(response.headers.get('X-Request-Id'))
+    with urllib.request.urlopen("{}".format(sys.argv[1])) as response:
+        print(response.getheader("X-Request-Id"))

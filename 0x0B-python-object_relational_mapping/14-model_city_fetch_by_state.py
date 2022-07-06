@@ -23,7 +23,8 @@ if __name__ == '__main__':
     Base.metadata.create_all(vtech)
     Session = sessionmaker(bind=vtech)
     session = Session()
-    rows = session.query(City, State).filter_by(City.state_id == State.id).order_by(City_id).all()
+    rows = session.query(City, State).filter(City.state_id == State.id)\
+        .order_by(City.id).all()
     for city, state in rows:
         print("{}: ({}) {}".format(state.name, city.id, city.name))
     session.close()
