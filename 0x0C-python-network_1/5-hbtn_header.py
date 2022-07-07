@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 from requests import requests
 from requests import get
 from sys import argv
