@@ -16,11 +16,11 @@ if __name__ == "__main__":
     try:
         val = req.json()
         if val == {}:
-            
+
             """
             printing no result
             """
-            
+
             print("No result")
         else:
             print("[{}] {}".format(val.get("id"), val.get("name")))
