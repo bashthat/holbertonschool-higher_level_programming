@@ -1,16 +1,17 @@
 #!/usr/bin/python3
-from requests import requests
-from requests import get
-from sys import argv
-
-
 """
 Python script that takes in a URL,
 sends a request to the URL and displays the
 value of the variable_X-request-id
 """
 
-if __name__ == '__main__':
+import requests
 
-    request = get(argv[1])
-    print(request.headers.get('X-Request-Id'))
+if __name__ == '__main__':
+    """
+    function that takes in a URL
+    """
+    request = requests.get("https://intranet.hbtn.io/status")
+    print("Body response:")
+    print("\t- type: {}".format(type(request.text)))
+    print("\t- content: {}".format(request.text))
