@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import requests
-
+from urllib import request, error
+from sys import argv
 """
 Write a Python script that fetches https://intranet.hbtn.io/status
 """
