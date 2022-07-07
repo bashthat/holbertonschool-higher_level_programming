@@ -9,10 +9,7 @@ import requests
 
 if __name__ == '__main__':
 
-    # retrieving the request
-
-    rx = requests.get('https://intranet.hbtn.io/status')
-    read = rx.text
+    read= requests.get('https://intranet.hbtn.io/status')
     """ reading and printing"""
     print("Body response:")
     print("\t- type: {}".format(type(read)))
