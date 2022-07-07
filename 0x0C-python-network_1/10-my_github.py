@@ -11,5 +11,5 @@ if __name__ == "__main__":
     importing url
     """
     url = "https://api.github.com/user"
-    r = requests.get(url, auth=(sys.argv[1], sys.argv[2]))
-    print('{}'.format(r.json().get('id')))
+    req = requests.get(url, auth=(sys.argv[1], sys.argv[2]))
+    print('{}'.format(req.json().get('id')))
