@@ -12,5 +12,5 @@ value of the variable_X-request-id
 
 if __name__ == '__main__':
     
-    r = get(argv[1])
-    print(r.headers.get('X-Request-Id'))
+    request = get(argv[1])
+    print(request.headers.get('X-Request-Id'))
