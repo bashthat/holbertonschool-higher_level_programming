@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from asyncore import read
+from ullib import read
 import requests
 """
 Write a Python script that fetches https://intranet.hbtn.io/status
