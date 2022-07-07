@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-import requests
 
 """
 Write a Python script that fetches https://intranet.hbtn.io/status
 """
+
+import requests
+
 
 if __name__ == '__main__':
 
@@ -11,6 +13,7 @@ if __name__ == '__main__':
 
     rx = requests.get('https://intranet.hbtn.io/status')
     read = rx.text
+    """ reading and printing"""
     print("Body response:")
     print("\t- type: {}".format(type(read)))
     print("\t- content: {}".format(read))
