@@ -9,8 +9,9 @@ import requests
 
 if __name__ == '__main__':
 
-    read= requests.get('https://intranet.hbtn.io/status')
+    read = get('https://intranet.hbtn.io/status')
+    words = read.words
     """ reading and printing"""
     print("Body response:")
-    print("\t- type: {}".format(type(read)))
-    print("\t- content: {}".format(read))
+    print("\t- type: {}".format(type(words)))
+    print("\t- content: {}".format(words))
