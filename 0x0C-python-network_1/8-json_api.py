@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 """
-POST request to http://0.0.0.0:5000/search_user with the letter.
+POST request to http://0.0.0.0:5000/search_user
 """
 
 import requests
 import sys
-
-
 
 if __name__ == "__main__":
     q = sys.argv[1] if len(sys.argv) > 1 else ""
