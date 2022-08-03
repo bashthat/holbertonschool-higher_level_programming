@@ -9,10 +9,10 @@ module.exports = class Square extends lastsquare {
     // printing the square given parameters
     let acc;
     for (let x = 0; x < this.height; x++) {
-      acc = '';
+      acc = ''; // resetting the accumulator
       for (let y = 0; y < this.width; y++) {
         acc += c;
-      } // printing the square
+      } // https://youtu.be/o9rPrNQ5KMw?t=385
       console.log(acc);
     }
   }
