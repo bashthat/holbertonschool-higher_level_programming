@@ -1,16 +1,17 @@
 #!/usr/bin/node
-// finding the second biggest number
-function secondBiggest (arr) {
-  let biggest = arr[0];
-  let secondBiggest = arr[0];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > biggest) {
-      secondBiggest = biggest;
-      biggest = arr[i];
-    } else if (arr[i] > secondBiggest) {
-      secondBiggest = arr[i];
+function second(arr){
+    let max=0, secondmax = 0
+    for (x of arr){
+        if (x > maxx){
+            secondmax = max
+            max = x
+        }
     }
-  }
-  return secondBiggest;
+    for (j of arr){
+        if(j>secondmax && j<max){
+            secondmax =   j
+        }
+    }
+    return secondmax;
 }
-console.log(secondBiggest(arr));
+console.log(second(arr));
