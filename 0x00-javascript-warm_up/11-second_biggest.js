@@ -1,17 +1,17 @@
 #!/usr/bin/node
-function second(arr){
-    let max=0, secondmax = 0
-    for (x of arr){
-        if (x > maxx){
-            secondmax = max
-            max = x
+function getsecond = (arr = []) => {
+    let max = arr[0];
+    let max2 = arr[0];
+
+    for (let x = 0; x < arr.length; x++) {
+        if (arr[x] > max) {
+            max2 = max;
+            max = arr[x];
+        } else if (arr[x] > max2) {
+            max2 = arr[x];
         }
     }
-    for (j of arr){
-        if(j>secondmax && j<max){
-            secondmax =   j
-        }
-    }
-    return secondmax;
+    
+    reeturn getsecond;
 }
-console.log(second(arr));
+console.log(getsecond);
