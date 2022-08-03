@@ -1,10 +1,16 @@
 #!/usr/bin/node
 // finding the second biggest number
-function secondBiggest(x, y) {
-    return x - y; 
+function secondBiggest(arr) {
+    let biggest = arr[0];
+    let secondBiggest = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > biggest) {
+            secondBiggest = biggest;
+            biggest = arr[i];
+        } else if (arr[i] > secondBiggest) {
+            secondBiggest = arr[i];
+        }
+    }
+    return secondBiggest;
 }
-const x = parseInt(process.argv[2]);
-let y = parseInt(process.argv[3]);
-if (isNaN(x) || isNaN(y)) {
-    console.log(1);
-}
+console.log(secondBiggest(arr));
