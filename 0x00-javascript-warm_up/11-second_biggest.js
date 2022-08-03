@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 function getsecond()
 arr = []; {
     let max = arr[0];
@@ -12,7 +13,5 @@ arr = []; {
             max2 = arr[x];
         }
     }
-    
-    return getsecond;
+    return max2;
 }
-console.log(getsecond);
