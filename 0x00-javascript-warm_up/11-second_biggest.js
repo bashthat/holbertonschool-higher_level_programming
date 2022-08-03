@@ -1,5 +1,6 @@
 #!/usr/bin/node
-function getsecond = (arr = []) => {
+function getsecond()
+arr = []; {
     let max = arr[0];
     let max2 = arr[0];
 
@@ -12,6 +13,6 @@ function getsecond = (arr = []) => {
         }
     }
     
-    reeturn getsecond;
+    return getsecond;
 }
 console.log(getsecond);
