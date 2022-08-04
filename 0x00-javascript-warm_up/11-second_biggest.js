@@ -1,17 +1,13 @@
 #!/usr/bin/node
-
-function getsecond()
-arr = []; {
-    let max = arr[0];
-    let max2 = arr[0];
-
-    for (let x = 0; x < arr.length; x++) {
-        if (arr[x] > max) {
-            max2 = max;
-            max = arr[x];
-        } else if (arr[x] > max2) {
-            max2 = arr[x];
-        }
-    }
-    return max2;
+// Find the second biggest number in a list
+if (process.argv.length <= 3) {
+  console.log(0);
+} else {
+  // splice to sort the array
+  const arr = process.argv.splice(2);
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  // sort and return
+  console.log(arr[arr.length - 2]);
 }
