@@ -7,4 +7,5 @@ const array = process.argv[2]; {
     for (let x = array; x > 0; x--) {
       console.log('C is fun');
     }
-  } }
+  }
+}
