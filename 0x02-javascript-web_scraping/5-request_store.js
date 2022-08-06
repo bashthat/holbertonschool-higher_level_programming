@@ -3,21 +3,16 @@
 // count requests
 // counst fs
 const request = require('request');
+const fs = require('fs');
 // write file
 request.get(process.argv[2], function (err, response, bod) {
   if (err) {
     console.log(err);
   } // error handling
   // handling arguments
-  const taskfunction = {};
-  for (const task of JSON.parse(bod)) {
-    if (task.completed === true) {
-      if (task.Id in taskfunction) {
-        taskfunction[task.Id] += 1;
-      } else { // parse and complete task
-        taskfunction[task.Id] = 1;
-      } // end if else
-    } // creating object with completed tasks
-  }
-  console.log(taskfunction);
+  fs.write(process.argv[3], bod, 'utf8', function (err) {
+    if (err) {
+      console.log(err);
+    } // error handling
+  });
 }); // word
