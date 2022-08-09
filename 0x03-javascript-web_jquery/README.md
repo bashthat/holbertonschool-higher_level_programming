@@ -1,0 +1,1 @@
+this is a directory of projects utilizing the JQuery in javascript as well as utilizing JQuery as part of the <import> in an HTML format. All files will be updated with the command semistandard *.js --global <filename.js>  and alwyas semistandard --fix <filename.js>. Good times learning more about web development and what's possible in the fullstack approach to the HBNB clone
