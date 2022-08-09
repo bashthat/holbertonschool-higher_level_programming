@@ -7,7 +7,7 @@ const fs = require('fs');
 // const url = process.argv[2];
 // const count = process.argv[3];
 const request = require('request');
-//request.get('http://loripsum.net/api', function (error, response, body) {
+// request.get('http://loripsum.net/api', function (error, response, body) {
 request.get(process.argv[2], function (error, response, body) {
   if (error) {
     console.log(error);
@@ -15,16 +15,17 @@ request.get(process.argv[2], function (error, response, body) {
   fs.writeFile(process.argv[3], body, (error) => {
     if (error) {
       console.log(error);
- // Print the google web page.
-  }});
+      // Print the google web page.
+    }
+  });
 });
 // write file
-//request(url, function (err, response, bod) {
+// request(url, function (err, response, bod) {
 //  if (err) {
 //    console.log(err);
 //  } else {
-  // error handling
-  // handling arguments
+// error handling
+// handling arguments
 
 //    fs.writeFile(count, bod, 'utf8', function (err) {
 //      if (err) {
@@ -32,5 +33,5 @@ request.get(process.argv[2], function (error, response, body) {
 //      }
 //    });
 //  } // error handling
-//}
-//); 
+// }
+// );
